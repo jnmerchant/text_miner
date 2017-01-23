@@ -25,53 +25,53 @@ describe Validator do
     end
   end
 
-  # describe '#is_hex?' do
-  #   it 'returns true if a string is a hex value' do
-  #     expect(@v.is_hex?('CAFE')).to eq true
-  #     expect(@v.is_hex?('9F9')).to eq true
-  #     expect(@v.is_hex?('123')).to eq true
-  #     expect(@v.is_hex?('6720EB3A9D1')).to eq true
-  #     expect(@v.is_hex?('')).to eq false
-  #     expect(@v.is_hex?('COFFEE')).to eq false
-  #   end
-  # end
-  #
-  # describe '#is_word?' do
-  #   it 'returns true if the string is a word' do
-  #     expect(@v.is_word?('hello')).to eq true
-  #     expect(@v.is_word?('wonderful')).to eq true
-  #     expect(@v.is_word?('zyggon')).to eq true
-  #     expect(@v.is_word?('horse-dagger')).to eq true
-  #     expect(@v.is_word?('18-wheeler')).to eq true
-  #     expect(@v.is_word?('')).to eq false
-  #     expect(@v.is_word?('12')).to eq false
-  #     expect(@v.is_word?('!!!')).to eq false
-  #     expect(@v.is_word?('bar*us')).to eq false
-  #   end
-  # end
-  #
-  # describe '#are_words?' do
-  #   it 'returns true if the string is all words' do
-  #     # and if the optional count parameter matches the number of words
-  #     expect(@v.are_words?('hello')).to eq true
-  #     expect(@v.are_words?('hello world')).to eq true
-  #     expect(@v.are_words?('raggggg hammer dog')).to eq true
-  #     expect(@v.are_words?('18-wheeler tarbox')).to eq true
-  #     expect(@v.are_words?('hello', count: 1)).to eq true
-  #     expect(@v.are_words?('hello world', count: 2)).to eq true
-  #     expect(@v.are_words?('raggggg hammer dog', count: 3)).to eq true
-  #     expect(@v.are_words?('18-wheeler tarbox', count: 2)).to eq true
-  #     expect(@v.are_words?('')).to eq false
-  #     expect(@v.are_words?('12')).to eq false
-  #     expect(@v.are_words?('hey !!!', count: 2)).to eq false
-  #     expect(@v.are_words?('bar*us w!zard', count: 2)).to eq false
-  #     expect(@v.are_words?('hello', count: 2)).to eq false
-  #     expect(@v.are_words?('hello world', count: 3)).to eq false
-  #     expect(@v.are_words?('raggggg hammer dog', count: 1)).to eq false
-  #     expect(@v.are_words?('18-wheeler tarbox', count: 3)).to eq false
-  #   end
-  # end
-  #
+  describe '#is_hex?' do
+    it 'returns true if a string is a hex value' do
+      expect(@v.is_hex?('CAFE')).to eq true
+      expect(@v.is_hex?('9F9')).to eq true
+      expect(@v.is_hex?('123')).to eq true
+      expect(@v.is_hex?('6720EB3A9D1')).to eq true
+      expect(@v.is_hex?('')).to eq false
+      expect(@v.is_hex?('COFFEE')).to eq false
+    end
+  end
+
+  describe '#is_word?' do
+    it 'returns true if the string is a word' do
+      expect(@v.is_word?('hello')).to eq true
+      expect(@v.is_word?('wonderful')).to eq true
+      expect(@v.is_word?('zyggon')).to eq true
+      expect(@v.is_word?('horse-dagger')).to eq true
+      expect(@v.is_word?('18-wheeler')).to eq true
+      expect(@v.is_word?('')).to eq false
+      expect(@v.is_word?('12')).to eq false
+      expect(@v.is_word?('!!!')).to eq false
+      expect(@v.is_word?('bar*us')).to eq false
+    end
+  end
+
+  describe '#are_words?' do
+    it 'returns true if the string is all words' do
+      # and if the optional count parameter matches the number of words
+      expect(@v.are_words?('hello')).to eq true
+      expect(@v.are_words?('hello world')).to eq true
+      expect(@v.are_words?('raggggg hammer dog')).to eq true
+      expect(@v.are_words?('18-wheeler tarbox')).to eq true
+      expect(@v.are_words?('hello', count: 1)).to eq true
+      expect(@v.are_words?('hello world', count: 2)).to eq true
+      expect(@v.are_words?('raggggg hammer dog', count: 3)).to eq true
+      expect(@v.are_words?('18-wheeler tarbox', count: 2)).to eq true
+      expect(@v.are_words?('')).to eq false
+      expect(@v.are_words?('12')).to eq false
+      expect(@v.are_words?('hey !!!', count: 2)).to eq false
+      expect(@v.are_words?('bar*us w!zard', count: 2)).to eq false
+      expect(@v.are_words?('hello', count: 2)).to eq false
+      expect(@v.are_words?('hello world', count: 3)).to eq false
+      expect(@v.are_words?('raggggg hammer dog', count: 1)).to eq false
+      expect(@v.are_words?('18-wheeler tarbox', count: 3)).to eq false
+    end
+  end
+
   # describe '#is_phone_number?' do
   #   it 'returns true for valid US phone number formats' do
   #     expect(@v.is_phone_number?('919-555-1212')).to eq true
