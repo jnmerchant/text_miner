@@ -15,7 +15,13 @@ class Validator
     !!/^\d*[a-z\-][a-z\-\d]*$/i.match(text)
   end
 
-  def are_words?(text, count=0)
-    !!/^\d*[a-z\-\s][a-z\-\d\s]*$/i.match(text)
+  def are_words?(text, options={})
+    word_count = text.split.size
+    count = options.fetch(:count, word_count)
+    if word_count == count && !!/^\d*[a-z\-\s][a-z\-\s]*$/i.match(text)
+      true
+    else
+      false
+    end
   end
 end
