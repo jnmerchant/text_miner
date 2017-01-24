@@ -24,4 +24,22 @@ class Validator
       false
     end
   end
+
+  def is_phone_number?(text)
+    !!/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/.match(text)
+  end
+
+  def is_money?(text)
+    !!/^\$[+-]?[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$/.match(text)
+  end
+
+  def is_zip_code?(text)
+    # !!/^\d{5}(?:[-\s]\d{4})?$/.match(text)
+    !!/^\d{5}(-\d{4})?$/.match(text)
+  end
+
+  def is_date?(text)
+    !!/[0-9\/.\-0-9\/.\-0-9]/.match(text)
+  end
+
 end

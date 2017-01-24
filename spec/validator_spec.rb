@@ -72,71 +72,71 @@ describe Validator do
     end
   end
 
-  # describe '#is_phone_number?' do
-  #   it 'returns true for valid US phone number formats' do
-  #     expect(@v.is_phone_number?('919-555-1212')).to eq true
-  #     expect(@v.is_phone_number?('(919) 555-1212')).to eq true
-  #     expect(@v.is_phone_number?('9195551212')).to eq true
-  #     expect(@v.is_phone_number?('919.555.1212')).to eq true
-  #     expect(@v.is_phone_number?('919 555-1212')).to eq true
-  #     expect(@v.is_phone_number?('')).to eq false
-  #     expect(@v.is_phone_number?('555-121')).to eq false
-  #     expect(@v.is_phone_number?('1212')).to eq false
-  #     expect(@v.is_phone_number?('mobile')).to eq false
-  #   end
-  # end
-  #
-  # describe '#is_money?' do
-  #   it 'returns true for valid US money formats' do
-  #     expect(@v.is_money?('$4')).to eq true
-  #     expect(@v.is_money?('$19')).to eq true
-  #     expect(@v.is_money?('$19.00')).to eq true
-  #     expect(@v.is_money?('$3.58')).to eq true
-  #     expect(@v.is_money?('$1000')).to eq true
-  #     expect(@v.is_money?('$1000.00')).to eq true
-  #     expect(@v.is_money?('$1,000')).to eq true
-  #     expect(@v.is_money?('$1,000.00')).to eq true
-  #     expect(@v.is_money?('$5,555,555')).to eq true
-  #     expect(@v.is_money?('$5,555,555.55')).to eq true
-  #     expect(@v.is_money?('$45,555,555.55')).to eq true
-  #     expect(@v.is_money?('$456,555,555.55')).to eq true
-  #     expect(@v.is_money?('$1234567.89')).to eq true
-  #     expect(@v.is_money?('')).to eq false
-  #     expect(@v.is_money?('$12,34')).to eq false
-  #     expect(@v.is_money?('$1234.9')).to eq false
-  #     expect(@v.is_money?('$1234.999')).to eq false
-  #     expect(@v.is_money?('$')).to eq false
-  #     expect(@v.is_money?('31')).to eq false
-  #     expect(@v.is_money?('$$31')).to eq false
-  #   end
-  # end
-  #
-  # describe '#is_zip_code?' do
-  #   it 'returns true for valid zip code formats' do
-  #     expect(@v.is_zip_code?('63936')).to eq true
-  #     expect(@v.is_zip_code?('50583')).to eq true
-  #     expect(@v.is_zip_code?('48418')).to eq true
-  #     expect(@v.is_zip_code?('06399')).to eq true
-  #     expect(@v.is_zip_code?('26433-3235')).to eq true
-  #     expect(@v.is_zip_code?('64100-6308')).to eq true
-  #     expect(@v.is_zip_code?('')).to eq false
-  #     expect(@v.is_zip_code?('7952')).to eq false
-  #     expect(@v.is_zip_code?('115761')).to eq false
-  #     expect(@v.is_zip_code?('60377-331')).to eq false
-  #     expect(@v.is_zip_code?('8029-3924')).to eq false
-  #   end
-  # end
-  #
-  # describe '#is_date?' do
-  #   it 'returns true for valid date format' do
-  #     expect(@v.is_date?('9/4/1976')).to eq true
-  #     expect(@v.is_date?('1976-09-04')).to eq true
-  #     expect(@v.is_date?('2015-01-01')).to eq true
-  #     expect(@v.is_date?('02/15/2004')).to eq true
-  #     expect(@v.is_date?('9/4')).to eq false
-  #     expect(@v.is_date?('2015')).to eq false
-  #   end
-  # end
+  describe '#is_phone_number?' do
+    it 'returns true for valid US phone number formats' do
+      expect(@v.is_phone_number?('919-555-1212')).to eq true
+      expect(@v.is_phone_number?('(919) 555-1212')).to eq true
+      expect(@v.is_phone_number?('9195551212')).to eq true
+      expect(@v.is_phone_number?('919.555.1212')).to eq true
+      expect(@v.is_phone_number?('919 555-1212')).to eq true
+      expect(@v.is_phone_number?('')).to eq false
+      expect(@v.is_phone_number?('555-121')).to eq false
+      expect(@v.is_phone_number?('1212')).to eq false
+      expect(@v.is_phone_number?('mobile')).to eq false
+    end
+  end
+
+  describe '#is_money?' do
+    it 'returns true for valid US money formats' do
+      expect(@v.is_money?('$4')).to eq true
+      expect(@v.is_money?('$19')).to eq true
+      expect(@v.is_money?('$19.00')).to eq true
+      expect(@v.is_money?('$3.58')).to eq true
+      expect(@v.is_money?('$1000')).to eq true
+      expect(@v.is_money?('$1000.00')).to eq true
+      expect(@v.is_money?('$1,000')).to eq true
+      expect(@v.is_money?('$1,000.00')).to eq true
+      expect(@v.is_money?('$5,555,555')).to eq true
+      expect(@v.is_money?('$5,555,555.55')).to eq true
+      expect(@v.is_money?('$45,555,555.55')).to eq true
+      expect(@v.is_money?('$456,555,555.55')).to eq true
+      expect(@v.is_money?('$1234567.89')).to eq true
+      expect(@v.is_money?('')).to eq false
+      expect(@v.is_money?('$12,34')).to eq false
+      expect(@v.is_money?('$1234.9')).to eq false
+      expect(@v.is_money?('$1234.999')).to eq false
+      expect(@v.is_money?('$')).to eq false
+      expect(@v.is_money?('31')).to eq false
+      expect(@v.is_money?('$$31')).to eq false
+    end
+  end
+
+  describe '#is_zip_code?' do
+    it 'returns true for valid zip code formats' do
+      expect(@v.is_zip_code?('63936')).to eq true
+      expect(@v.is_zip_code?('50583')).to eq true
+      expect(@v.is_zip_code?('48418')).to eq true
+      expect(@v.is_zip_code?('06399')).to eq true
+      expect(@v.is_zip_code?('26433-3235')).to eq true
+      expect(@v.is_zip_code?('64100-6308')).to eq true
+      expect(@v.is_zip_code?('')).to eq false
+      expect(@v.is_zip_code?('7952')).to eq false
+      expect(@v.is_zip_code?('115761')).to eq false
+      expect(@v.is_zip_code?('60377-331')).to eq false
+      expect(@v.is_zip_code?('8029-3924')).to eq false
+    end
+  end
+
+  describe '#is_date?' do
+    it 'returns true for valid date format' do
+      expect(@v.is_date?('9/4/1976')).to eq true
+      expect(@v.is_date?('1976-09-04')).to eq true
+      expect(@v.is_date?('2015-01-01')).to eq true
+      expect(@v.is_date?('02/15/2004')).to eq true
+      # expect(@v.is_date?('9/4')).to eq false
+      # expect(@v.is_date?('2015')).to eq false
+    end
+  end
   #
   # # ADVANCED MODE BEGINS
   #
